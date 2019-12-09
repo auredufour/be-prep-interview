@@ -1,3 +1,11 @@
+Olfa: 
+- Add some documentation on how to get some of the todos
+- Add an endpoint to modify and existing todo (patch)
+- Add an endpoint to delete a todo
+
+if you need access to the firebase account, let me know, I can give it to you.
+Good luck!
+
 ## Installation
 
 ```sh
