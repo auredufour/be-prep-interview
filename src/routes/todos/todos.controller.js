@@ -1,7 +1,7 @@
 const db = require("../../db");
 
-const getCitiesController = (req, res) => {
-    db.collection("cities")
+const getTodosController = (req, res) => {
+    db.collection("todos")
         .get()
         .then(snapshot => {
             res.json({
@@ -20,8 +20,8 @@ const getCitiesController = (req, res) => {
 
 };
 
-const postCitiesController = (req, res) => {
-    db.collection("cities")
+const postTodosController = (req, res) => {
+    db.collection("todos")
     .add({
        ...req.body
     })
@@ -29,7 +29,7 @@ const postCitiesController = (req, res) => {
         res.status(201)
             .json({
                 id: docRef.id,
-                message: "City successfully created"
+                message: "Todo successfully created"
             });
     })
     .catch(error => {
@@ -38,6 +38,6 @@ const postCitiesController = (req, res) => {
 };
 
 module.exports = {
-    getCitiesController,
-    postCitiesController
+    getTodosController,
+    postTodosController
 }
